@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style2.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="rjlogo">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+        <h3>Rajasthan Police Hackathon</h3>
+        <img src="{{ url_for('static',filename='image1.jpg')}}" class="raccam">
+    </div>
+    <div class="cyber-glance">
+        <p>Results from Famous Phishing Websites Detecting Systems</p>
+        <table class="punda">
+            <tr>
+                <th>ESTsecurity </th>
+                <td>{{data[0]}}</td>
+            </tr>
+            <tr>
+                <th>Google Safebrowsing</th>
+                <td>{{data[1]}}</td>
+            </tr>
+            <tr>
+                <th>Juniper Networks</th>
+                <td>{{data[2]}}</td>
+            </tr>
+            <tr>
+                <th>K7AntiVirus</th>
+                <td>{{data[3]}}</td>
+            </tr>
+            <tr>
+                <th>Kaspersky</th>
+                <td>{{data[4]}}</td>
+            </tr>
+            <tr>
+                <th>PhishLabs</th>
+                <td>{{data[5]}}</td>
+            </tr>
+            <tr>
+                <th>Netcraft</th>
+                <td>{{data[6]}}</td>
+            </tr>
+            <tr>
+                <th>Phishtank</th>
+                <td>{{data[7]}}</td>
+            </tr>
+            <tr>
+                <th>Quick Heal</th>
+                <td>{{data[8]}}</td>
+            </tr>
+            <tr>
+                <th>URLQuery</th>
+                <td>{{data[9]}}</td>
+            </tr>
+        </table>
+    </div>   
+</body>
+</html>

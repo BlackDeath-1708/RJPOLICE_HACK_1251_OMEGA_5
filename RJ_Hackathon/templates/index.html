@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="rjlogo">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+        <h3>Rajasthan Police Hackathon</h3>
+        <img src="{{ url_for('static',filename='image1.jpg')}}" class="raccam">
+    </div>
+    <div class="webdet">
+        <form action="/form" method="POST" id="form">
+            <h1 id="web-name">Safe-Net</h1>
+            <input type="text" class="url_input" placeholder="Enter the url or phone number...."name="url_name" value={{url}} >
+            <input type="submit" class="but" >
+            {% if state==1 %}
+            <table id="url">
+                <tr>
+                    <th>URL Given</th>
+                    <th>Domain name</th>
+                    <th>IP Address</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>{{url}}</td>
+                    <td>{{domain}}</td>
+                    <td>{{ip}}</td>
+                    <td>{{data}}</td>
+                </tr>
+            </table>
+            <div class="dance">
+                <a class="furt" href="http://localhost:5000/cyber_laws">Cyber Laws</a>
+                <a class="furt" href="http://localhost:5000/more_details/{{domain}}">More Details</a>
+            </div>
+            <h3>{{remark}}</h3>
+            {% elif state==2 %}
+            <table id="num">
+                <tr>
+                    <th>Status</th>
+                    <th>Fraud Score</th>
+                    <th>Abuser</th>
+                    <th>Spammer</th>
+                </tr>
+                <tr>
+                    <td>{{data}}</td>
+                    <td>{{ip}}</td>
+                    <td>{{domain}}</td>
+                    <td>{{remark}}</td>
+                </tr>
+            </table>
+            {% endif %}
+            <br>
+        </form>
+    </div>
+    <div class="addet">
+        <form action="">
+            <h1>Drop Box</h1>
+            <div id="drop-area" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                Drop your file here
+            </div>
+            <div id="image">{{imageFile}}</div>
+        </form>
+    </div>   
+    <script src="{{ url_for('static',filename='script.js')}}"></script>
+    <script>
+        function dragOverHandler(event) {
+          // Prevent default behavior to allow drop
+          event.preventDefault();
+        }
+    
+        function dropHandler(event) {
+          // Prevent default behavior to allow drop
+          event.preventDefault();
+    
+          // Access the dropped files
+          const files = event.dataTransfer.files;
+    
+          // Check if any files were dropped
+          if (files.length > 0) {
+            // Assuming only one file is dropped, you can modify this logic for multiple files
+            const imageFile = files[0];
+            // Check if the dropped file is an image
+        }}
+      </script> 
+</body>
+</html>
