@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+body{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    gap:30px;
+    background:url(image.jpg.jpg);
+    background-repeat: no-repeat;
+}
+
+.rjlogo{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    font-size:23px;
+    align-items: center;
+    justify-self: center;
+    position: absolute;
+    top:5%;
+    left:2%;
+    color:white;
+    width:90%;
+    padding:10px;
+    font-family: Montserrat;
+}
+
+
+
+.raccam{
+    margin-left:1150px;
+    width:200px;
+    height:50%;
+    border-radius: 5px;
+}
+
+.cyber-dance{
+    height:100%;
+    background-color:rgba(186, 176, 176, 0.2);
+    color:white;
+    margin-top:400px;
+    border-radius: 5px;
+}
+
+.cyber-dance pre{
+    margin-left: 25px;
+}
